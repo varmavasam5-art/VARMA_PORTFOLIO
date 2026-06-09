@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Rakesh Varma Vasam | Spider-Sense Portfolio</title>
+    <!-- Google Fonts: Syne, Oswald & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+    <!-- Custom Editorial Spider-Reticle Cursor -->
+    <div class="cursor-dot-follower" id="cursorFollower"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    
+    <!-- Floating Project Preview Cursor Follower -->
+    <div class="project-preview-follower" id="projectPreviewFollower">
+        <div class="preview-img-wrapper">
+            <img src="" alt="Project Preview" id="previewFollowerImg" class="preview-follower-img">
+        </div>
+    </div>
+
+    <!-- Comic Halftone & Screen Scan Overlays -->
+    <div class="halftone-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Cinematic Shutters -->
+    <div class="shutter shutter-top" id="shutterTop"></div>
+    <div class="shutter shutter-bottom" id="shutterBottom"></div>
+
+    <!-- Entrance Loading Interface -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <!-- Cyber Spider Logo -->
+            <div class="cyber-spider-wrapper">
+                <svg class="cyber-spider-logo" viewBox="0 0 100 100">
+                    <path class="spider-head" d="M50 24 L46 32 L54 32 Z" fill="currentColor"/>
+                    <path class="spider-body" d="M50 35 L42 50 L50 68 L58 50 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-l1" d="M44 38 Q32 30 18 15 Q17 14 19 14 Q32 28 44 36 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-l2" d="M42 43 Q26 40 12 32 Q11 31 13 31 Q26 38 42 41 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-l3" d="M42 48 Q24 54 10 65 Q9 66 11 66 Q24 56 42 50 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-l4" d="M44 54 Q30 70 20 85 Q19 86 21 86 Q30 72 44 56 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-r1" d="M56 38 Q68 30 82 15 Q83 14 81 14 Q68 28 56 36 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-r2" d="M58 43 Q74 40 88 32 Q89 31 87 31 Q74 38 58 41 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-r3" d="M58 48 Q76 54 90 65 Q91 66 89 66 Q76 56 58 50 Z" fill="currentColor"/>
+                    <path class="spider-leg leg-r4" d="M56 54 Q70 70 80 85 Q81 86 79 86 Q70 72 56 56 Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <span class="loader-tag">// SPIDER-SENSE ONLINE</span>
+            <h2 class="loader-title text-glitch" data-text="SAI RAKESH VARMA">SAI RAKESH VARMA</h2>
+            <div class="loader-subtitle">DATA • WEB • MOTION</div>
+            
+            <div class="loader-warning">
+                <span>System utilizes low-frequency spider-web audio sweeps. Headset recommended.</span>
+            </div>
+            
+            <button id="enterBtn" class="enter-btn cursor-hover">
+                <span>LAUNCH SWING WINDOW</span>
+            </button>
+        </div>
+        <div class="loader-footer">
+            <span>© 2026 SAI RAKESH VARMA VASAM. DIRECTIVE SECURED.</span>
+        </div>
+    </div>
+
+    <!-- Main Editorial Dashboard -->
+    <div id="experience" class="main-container hidden">
+        <!-- Minimal Header -->
+        <header class="cinematic-header">
+            <a href="#" class="logo-link cursor-hover">
+                <div class="header-logo-container">
+                    <svg class="cyber-spider-logo mini" viewBox="0 0 100 100">
+                        <path class="spider-head" d="M50 24 L46 32 L54 32 Z" fill="currentColor"/>
+                        <path class="spider-body" d="M50 35 L42 50 L50 68 L58 50 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-l1" d="M44 38 Q32 30 18 15 Q17 14 19 14 Q32 28 44 36 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-l2" d="M42 43 Q26 40 12 32 Q11 31 13 31 Q26 38 42 41 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-l3" d="M42 48 Q24 54 10 65 Q9 66 11 66 Q24 56 42 50 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-l4" d="M44 54 Q30 70 20 85 Q19 86 21 86 Q30 72 44 56 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-r1" d="M56 38 Q68 30 82 15 Q83 14 81 14 Q68 28 56 36 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-r2" d="M58 43 Q74 40 88 32 Q89 31 87 31 Q74 38 58 41 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-r3" d="M58 48 Q76 54 90 65 Q91 66 89 66 Q76 56 58 50 Z" fill="currentColor"/>
+                        <path class="spider-leg leg-r4" d="M56 54 Q70 70 80 85 Q81 86 79 86 Q70 72 56 56 Z" fill="currentColor"/>
+                    </svg>
+                    <span class="logo-text">S.R.V.V.</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="#showcase" class="nav-item cursor-hover">01 / SHOWCASE</a>
+                <a href="#vision" class="nav-item cursor-hover">02 / INTENT</a>
+                <a href="#synapse" class="nav-item cursor-hover">03 / SYSTEMS</a>
+                <a href="#connect" class="nav-item cursor-hover">04 / CHAT</a>
+            </nav>
+            <div class="audio-control cursor-hover" id="audioControl">
+                <div class="visualizer" id="visualizer">
+                    <canvas id="audioWaveCanvas" width="80" height="20" class="wave-canvas"></canvas>
+                </div>
+                <button class="audio-toggle" id="audioToggleBtn" aria-label="Toggle Audio">
+                    <svg id="volumeIcon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Deck -->
+        <section class="hero-section" id="hero">
+            <!-- 3D Interactive Web Canvas Background -->
+            <canvas id="canvasBackground" class="hero-canvas"></canvas>
+            
+            <div class="hero-content">
+                <div class="hero-tagline animate-reveal" style="--delay: 1;">3RD YEAR DATA SCIENCE STUDENT • WEB DEVELOPER & VIDEO EDITOR</div>
+                <h1 class="hero-title animate-reveal text-glitch" data-text="SWINGING DEEP INTO THE CREATIVE SPECTRUM" style="--delay: 2;">
+                    SWINGING DEEP<br>
+                    INTO THE<br>
+                    <span class="highlight-text">CREATIVE SPECTRUM</span>
+                </h1>
+                
+                <div class="hero-bottom-grid animate-reveal" style="--delay: 3;">
+                    <div class="grid-col-left">
+                        <p class="hero-desc">
+                            Swinging between data science algorithms, responsive web development, and motion graphic narratives. Connecting clean architectures, interactive user interfaces, and digital film pacing.
+                        </p>
+                    </div>
+                    <div class="grid-col-right">
+                        <div class="meta-item">
+                            <span class="meta-label">IDENTITY:</span>
+                            <span class="meta-val">Sai Rakesh Varma Vasam</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">SECTOR:</span>
+                            <span class="meta-val">Algorithms / Web / Film</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuous Infinite Text Ticker -->
+            <div class="ticker-wrap animate-reveal" style="--delay: 3.5;">
+                <div class="ticker">
+                    <span class="ticker-item">SPIDER-SENSE ACTIVE //</span>
+                    <span class="ticker-item">WEB DEV INTERACTION //</span>
+                    <span class="ticker-item">GLITCH MOTION EDITS //</span>
+                    <span class="ticker-item">DATA SCIENCE ALGORITHMS //</span>
+                    <span class="ticker-item">SPIDER-SENSE ACTIVE //</span>
+                    <span class="ticker-item">WEB DEV INTERACTION //</span>
+                    <span class="ticker-item">GLITCH MOTION EDITS //</span>
+                    <span class="ticker-item">DATA SCIENCE ALGORITHMS //</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase List Section -->
+        <section class="showcase-section" id="showcase">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">01 / WEB COMPOSITIONS</span>
+                    <h2 class="section-title">THE SHOWCASE</h2>
+                </div>
+
+                <!-- List Table Accordion layout -->
+                <div class="project-list" id="projectList">
+                    <!-- Row 1 -->
+                    <div class="project-row cursor-hover" data-project="ds">
+                        <div class="row-num">01</div>
+                        <div class="row-title-block">
+                            <span class="row-category">DATA SCIENCE & ML</span>
+                            <h3 class="row-name">SYNAPTIC ANOMALIES</h3>
+                        </div>
+                        <div class="row-desc">Neural anomaly network classifier mapping high-dimensional data points.</div>
+                        <div class="row-arrow">↗</div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="project-row cursor-hover" data-project="video">
+                        <div class="row-num">02</div>
+                        <div class="row-title-block">
+                            <span class="row-category">CREATIVE VIDEO EDITING</span>
+                            <h3 class="row-name">SPIDER-SENSE EDIT</h3>
+                        </div>
+                        <div class="row-desc">Premium cinematic showreel combining glitch cuts and halftone effects.</div>
+                        <div class="row-arrow">↗</div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="project-row cursor-hover" data-project="web">
+                        <div class="row-num">03</div>
+                        <div class="row-title-block">
+                            <span class="row-category">WEB DEV PORTAL</span>
+                            <h3 class="row-name">DYNAMIC GATEWAY</h3>
+                        </div>
+                        <div class="row-desc">Interactive frontend gateway dashboard detailing performance indicator metrics.</div>
+                        <div class="row-arrow">↗</div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="project-row cursor-hover" data-project="synergy">
+                        <div class="row-num">04</div>
+                        <div class="row-title-block">
+                            <span class="row-category">CREATIVE SYNERGY</span>
+                            <h3 class="row-name">ARACHNE COMPOSITIONS</h3>
+                        </div>
+                        <div class="row-desc">Fusing mathematical data paths with responsive animation loops.</div>
+                        <div class="row-arrow">↗</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section class="vision-section" id="vision">
+            <div class="section-container">
+                <div class="vision-grid">
+                    <div class="vision-text-side">
+                        <span class="section-tag">02 / CORE PHILOSOPHY</span>
+                        <h2 class="section-title">THE CONVERGENCE</h2>
+                        
+                        <p class="vision-bio">
+                            I am <strong>Sai Rakesh Varma Vasam</strong>. As a Data Science student, creative video editor, and web developer, I build networks where numeric calculations and responsive design bounds are woven into highly interactive and kinetic templates.
+                        </p>
+                        <p class="vision-bio">
+                            My focus points to **Creative Frontend Systems** and **Dynamic User Interfaces**. Like spider-web strands, interface components are interconnected parameters that structure user experiences. Fusing analytical data clusters, interactive web logic, and high-energy motion editing allows me to audibly and visually dissect data, turning calculations into stories that jump off the screen.
+                        </p>
+                        
+                        <div class="philosophy-stack">
+                            <div class="ph-row">
+                                <span class="ph-index">I /</span>
+                                <div class="ph-content">
+                                    <span class="ph-title">INTERACTIVE WEB PLATFORMS</span>
+                                    <span class="ph-desc">Designing clean user flows, constructing layouts, and mapping database elements.</span>
+                                </div>
+                            </div>
+                            <div class="ph-row">
+                                <span class="ph-index">II /</span>
+                                <div class="ph-content">
+                                    <span class="ph-title">CYBER GLITCH MOTION</span>
+                                    <span class="ph-desc">Applying chromatic aberration, pacing grids, and sound sweeps to tell stories.</span>
+                                </div>
+                            </div>
+                            <div class="ph-row">
+                                <span class="ph-index">III /</span>
+                                <div class="ph-content">
+                                    <span class="ph-title">INTERACTIVE THREADS</span>
+                                    <span class="ph-desc">Building asymmetrical layouts with live, responsive visual web nodes.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chronological Timeline -->
+                    <div class="timeline-side">
+                        <span class="section-tag">CHRONOLOGICAL LOG</span>
+                        <div class="timeline">
+                            <div class="timeline-node">
+                                <div class="node-year">2023</div>
+                                <div class="node-body">
+                                    <h4 class="node-title">SPINNING DATA THREADS</h4>
+                                    <p>Embarked on my Data Science bachelor's degree. Discovered statistical model matrices, database architectures, and Python loops.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-year">2024</div>
+                                <div class="node-body">
+                                    <h4 class="node-title">MOTION CUTS & TIMELINES</h4>
+                                    <p>Stepped into professional creative video editing. Mastered color wheels, audio levels, glitches, and visual timing grids.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-year">2025</div>
+                                <div class="node-body">
+                                    <h4 class="node-title">INTERACTIVE WEB PLATFORMS</h4>
+                                    <p>Stepped deep into frontend architectures. Developed interactive components, study-rich dashboard widgets, and custom canvases.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-year">2026</div>
+                                <div class="node-body">
+                                    <h4 class="node-title">SYNAPTIC WEB DEV & MOTION</h4>
+                                    <p>Fusing machine learning modeling with high-fidelity web code and rendering creative narratives inside responsive comic-glitch portfolios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities (Skills) Section -->
+        <section class="synapse-section" id="synapse">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">03 / CAPABILITIES SYSTEMS</span>
+                    <h2 class="section-title">THE SYNAPSE</h2>
+                </div>
+
+                <!-- Structured Editorial Border Table -->
+                <div class="capabilities-table">
+                    <!-- Column 1 -->
+                    <div class="cap-column">
+                        <h3 class="cap-header">DATA SCIENCE</h3>
+                        <ul class="cap-list">
+                            <li>Python Scripting</li>
+                            <li>Clustering Models</li>
+                            <li>Data Visualization</li>
+                            <li>Pandas & NumPy</li>
+                            <li>Anomaly Classifiers</li>
+                            <li>SQL Database queries</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="cap-column highlight-column">
+                        <h3 class="cap-header">CREATIVE MOTION</h3>
+                        <ul class="cap-list">
+                            <li>Adobe Premiere Pro</li>
+                            <li>Adobe After Effects</li>
+                            <li>DaVinci Resolve</li>
+                            <li>Glitch & Title Sequences</li>
+                            <li>Color grading profiles</li>
+                            <li>Sound Design Sync</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="cap-column">
+                        <h3 class="cap-header">WEB DEVELOPMENT</h3>
+                        <ul class="cap-list">
+                            <li>HTML5 & CSS3 Variables</li>
+                            <li>ES6 JavaScript Logic</li>
+                            <li>Responsive Layouts</li>
+                            <li>Web Audio API synthesis</li>
+                            <li>HTML5 Canvas Rendering</li>
+                            <li>Git & Interface Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Gateway (Contact) -->
+        <section class="connect-section" id="connect">
+            <div class="section-container">
+                <div class="connect-layout">
+                    <div class="connect-left-info">
+                        <span class="section-tag">04 / DISPATCH MESSAGES</span>
+                        <h2 class="connect-main-title">INITIATE CONNECTION</h2>
+                        <p class="connect-sub-desc">
+                            Ping my terminal for web development projects, creative motion graphics collaborations, or data models. Ready to build and animate targets.
+                        </p>
+                        <div class="status-box">
+                            <span class="status-marker"></span>
+                            <span class="status-text">HOST STATUS: ONLINE & WEB-SLINGING</span>
+                        </div>
+                    </div>
+
+                    <!-- Clean bottom-border only input fields -->
+                    <div class="connect-right-form">
+                        <form id="contactForm" class="editorial-form">
+                            <!-- FormSubmit Parameters -->
+                            <input type="hidden" name="_subject" value="[Spider-Portfolio] New Connection Signal!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-row">
+                                <label for="name" class="form-label">IDENTITY SIGNAL</label>
+                                <input type="text" id="name" name="name" required class="editorial-input cursor-hover" placeholder="Enter your name">
+                            </div>
+                            <div class="form-row">
+                                <label for="email" class="form-label">DIGITAL ADDRESS</label>
+                                <input type="email" id="email" name="email" required class="editorial-input cursor-hover" placeholder="Enter your email">
+                            </div>
+                            <div class="form-row">
+                                <label for="category" class="form-label">REQUEST VECTOR</label>
+                                <select id="category" name="category" class="editorial-input cursor-hover">
+                                    <option value="web">Web Application Development</option>
+                                    <option value="video">Creative Motion Graphics & Editing</option>
+                                    <option value="ds">Data Science & ML Models</option>
+                                    <option value="all">Fusing Code, Data, & Media Solutions</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="message" class="form-label">TRANSMISSION PAYLOAD</label>
+                                <textarea id="message" name="message" required class="editorial-input cursor-hover" rows="3" placeholder="Outline project deliverables..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-action-btn cursor-hover">
+                                <span>DISPATCH SIGNAL</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimalist Footer -->
+        <footer class="cinematic-footer">
+            <!-- Footer Animated Hanging Webs Canvas -->
+            <canvas id="canvasFooter" class="footer-canvas"></canvas>
+
+            <div class="footer-left">
+                <span class="footer-logo">S.R.V.V. // 2026</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top cursor-hover">
+                    <span>BACK TO APEX ↗</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Editorial Detail Overlay Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close cursor-hover" id="modalCloseBtn" aria-label="Close modal">✕</button>
+            <div class="modal-layout">
+                <div class="modal-graphic-wrapper">
+                    <img id="modalImg" src="" alt="Project Visual" class="modal-graphic">
+                </div>
+                <div class="modal-details-wrapper">
+                    <span id="modalCategory" class="modal-tag">CATEGORY</span>
+                    <h3 id="modalName" class="modal-title">PROJECT NAME</h3>
+                    <p id="modalLongDesc" class="modal-description">Detailed descriptive statement outlining analytical modeling or cybersecurity penetration steps taken to audit system networks.</p>
+                    <div class="modal-matrix-stats">
+                        <div class="stat-line">
+                            <span class="stat-label">GOAL</span>
+                            <span id="modalGoal" class="stat-value">Target Goal</span>
+                        </div>
+                        <div class="stat-line">
+                            <span class="stat-label">PIPELINE</span>
+                            <span id="modalStack" class="stat-value">Stack libraries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
